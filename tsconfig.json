@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "jsx": "react",
+    "paths": {
+      "components/*": ["./src/script/components/*"],
+      "style/*": ["./src/style/*"],
+      "hooks/*": ["./src/script/hooks/*"],
+      "features/*": ["./src/script/features/*"],
+      "assets/*": ["./src/assets/*"],
+      "themes/*": ["./src/script/app/styles/themes/*"],
+      "script/*": ["./src/script/*"],
+      "src/*": ["./src/*"]
+    },
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "target": "es5",
+    "downlevelIteration": true, //needs for iterations cycle
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+}

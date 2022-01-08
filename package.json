@@ -1,0 +1,140 @@
+{
+  "name": "webpack-demo",
+  "version": "0.2.5",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack serve --open --config webpack.dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "test/.*\\.(test|spec)\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/test/mocks/styleMock.ts",
+      "\\.(png|jpg|svg|gif)$": "<rootDir>/test/mocks/fileMock.ts",
+      "^app/(.*)$": "<rootDir>/src/script/app/$1",
+      "^components/(.*)$": "<rootDir>/src/script/components/$1",
+      "^features/(.*)$": "<rootDir>/src/script/features/$1",
+      "^hooks/(.*)$": "<rootDir>/src/script/hooks/$1",
+      "^style/(.*)$": "<rootDir>/src/style/$1",
+      "^assets/(.*)$": "<rootDir>/src/assets/$1",
+      "^themes/(.*)$": "<rootDir>/src/script/app/styles/themes/$1",
+      "^script/(.*)$": "<rootDir>/src/script/$1",
+      "^src/(.*)$": "<rootDir>/src/$1"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/prepareTestEnvironment.ts"
+    ],
+    "testEnvironment": "jsdom",
+    "verbose": true
+  },
+  "lint-staged": {
+    "**/*.ts?(x)": [
+      "npx prettier --write"
+    ],
+    "**/*.scss": [
+      "npx prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/all-the-cities": "^3.1.0",
+    "@types/dotenv-webpack": "^7.0.3",
+    "@types/node": "^16.9.1",
+    "@types/nodemailer": "^6.4.4",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.14",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "babel-plugin-styled-components": "^1.13.2",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "lint-staged": "^11.0.0",
+    "msw": "^0.33.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^6.1.0",
+    "prettier": "2.3.2",
+    "react-speech-kit": "^3.0.1",
+    "react-test-renderer": "^17.0.2",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "styled-components": "^5.3.3",
+    "ts-jest": "^27.0.3",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.4",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@hookform/resolvers": "^2.8.5",
+    "@mui/base": "^5.0.0-alpha.58",
+    "@mui/codemod": "^5.0.1",
+    "@mui/icons-material": "^5.0.3",
+    "@mui/lab": "^5.0.0-alpha.59",
+    "@mui/material": "^5.2.2",
+    "@mui/styles": "^5.0.1",
+    "@react-hook/mouse-position": "^4.1.1",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@svgr/webpack": "^5.5.0",
+    "@types/dom-mediacapture-record": "^1.0.10",
+    "@types/testing-library__jest-dom": "^5.14.1",
+    "@types/validator": "^13.6.3",
+    "all-the-cities": "^3.1.0",
+    "apexcharts": "^3.27.2",
+    "aws-sdk": "^2.987.0",
+    "buffer": "^5.7.1",
+    "dotenv": "^10.0.0",
+    "dotenv-webpack": "^7.0.3",
+    "dtsgenerator": "^3.12.1",
+    "get-user-locale": "^1.4.0",
+    "html-react-parser": "^1.2.7",
+    "jest-styled-components": "^7.0.5",
+    "jquery": "^3.6.0",
+    "libphonenumber-js": "^1.9.23",
+    "moment": "^2.29.1",
+    "msw": "^0.32.1",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.22.0",
+    "react-redux": "^7.2.5",
+    "react-router-dom": "^5.2.0",
+    "ts-node": "^10.0.0",
+    "usehooks-ts": "^1.1.1"
+  }
+}
